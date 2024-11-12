@@ -25,18 +25,14 @@ const images = [
   },
 ];
 
-// отримуємо доступ до классу списку
 
 const gallery = document.querySelector(".gallery");
 
-// створюємо структуру вкладеності HTML за допомогою методу .map() і шаблонного рядку. Методом .join() перетворюємо з масиву на строку
 
 const createGalleryItems = images
   .map((image) => {
     return `<li class="gallery-item"><img class="gallery-item-image" src="${image.url}" alt="${image.alt}"></li>`;
   })
   .join("");
-
-// додаємо елементи в DOM
 
 gallery.insertAdjacentHTML("afterbegin", createGalleryItems);
